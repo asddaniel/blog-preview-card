@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('../assets/fonts/static/Figtree-SemiBold.ttf');
+    src: url('../assets/fonts/static/Figtree-ExtraBold.ttf');
+    src: url('../assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+    src: url('../assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+}
+
+:root{
+    --smart-yellow:hsl(47, 88%, 63%);
+    --dark-style:hsl(0, 0%, 7%);
+    --neutral-style:hsl(0, 0%, 50%);
+}
+body{
+    background-color: var(--smart-yellow);
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 23em;
+    height: 30em;
+    background-color: white;
+    border-radius: 1em;
+    border: 1px solid var(--dark-style);
+    box-shadow: 9px 9px 2px var(--dark-style);
+    padding: 1em;
+    cursor:pointer;
+    transition: all .3s ease-in-out;
+   
+}
+.card:hover{
+    box-shadow: 14px 14px 2px var(--dark-style);  
+}
+.container-image{
+ border-radius: 1em;
+ width: 100%;
+ height: 40%;
+ background-image: url(../assets/images/illustration-article.svg);
+ background-size: contain;
+}
+.wrapper-btn{
+    display: flex;
+    justify-content: start;
+    padding-top: 1.1em;
+}
+.wrapper-btn button{
+    padding: .5em;
+    background-color: var(--smart-yellow);
+    border-radius: .3em;
+    font-weight: bold;
+}
+.article-date{
+    padding-top: 1em;
+    font-size: 1em;
+}
+.article-title{
+    padding-top: 1em;
+    /* font-size: 92px; */
+    font-weight: bold;
+}
+.article-title h1:hover{
+    color: var(--smart-yellow);
+}
+.article-title h1{
+    transition: all .3s ease-in-out;
+    font-size: large;
+    font-weight: 900;
+    color: var(--dark-style);
+    /* font-optical-sizing: 400em;
+    font-kerning: auto; */
+}
+.article-text{
+    padding-top: 1em;
+    font-size: 1em;
+    color: var(--neutral-style);
+}
+.wrapper-avatar{
+    padding-top: 1em;
+    display: flex;
+    justify-content: start;
+    gap:.8em;
+    align-items: center;
+}
+.avatar-img{
+    width: 2em;
+}
+.avatar-name{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+    .wrapper{
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+    }
+    
+}
